@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 <body>
     <header>
         <div class = "header">
+            <!-- Search -->
             <form>
                 <div class = "search">
                     <input class = "searchBar"
@@ -18,12 +22,14 @@
                 </div>
             </form>
 
+            <!-- Icons -->
                 <div class = "icons">
                     <div><button class = "buttonsIcon"><img class = "icon" src = "img/home.svg" alt="Home"></button></div>
                     <div><button class = "buttonsIcon"><img class = "icon" src = "img/enveloppe.svg" alt="Email"></button></div>
                     <div><button class = "buttonsIcon"><img class = "icon" src = "img/video.svg" alt="Visio"></button></div>
                 </div>
 
+                <!-- User -->
                 <div class = "welcome">
                     <div><h3 class = "userNameText">Welcome to the Dashboard of : </h3></div>
                     <div class = "userName"><p class = "userNameText">User 1</p></div>
@@ -32,34 +38,67 @@
     </header>
 
     <main>
+        <!-- Menu -->
         <div class = "cardMenu">
             <h2>Dashboard Menu</h2>
-            <p>Dashboard</p>
-            <p>Analytics</p>
-            <p>Kanban</p>
-            <p>File Manager</p>
-            <p>History</p>
-            <p>______________</p> 
-            <p>Settings</p>
-            <p>Contact</p> 
-            <p>Logout</p>  
+            <div class = "menu">
+                <button class = "menuButton">Dashboard</button>
+                <button class = "menuButton">Analytics</button>
+                <button class = "menuButton">Kanban</button>
+                <button class = "menuButton">File Manager</button>
+                <button class = "menuButton">History</button>
+            </div>
+
+            <p class = "separator">____________</p>
+            
+            <div class = "settingsMenu">
+                <button class = "menuButton">Settings</button>
+                <button class = "menuButton">Contact</button> 
+                <button class = "menuButton">Logout</button>  
+            </div>
         </div>
+
         <div class = "main">
+            <!-- Cards Message -->
             <div class = "cardMessage">
                 <button class = "button">New Message</button>
-                <h2>Message</h2>
-                <p>Tout les messages sont affichés ici.</p>
+                <h2>Messages</h2>
+                <div class = "cardMessageContent"><p>Tout les messages sont affichés ici.</p>
+                </div>
+                <div class = "cardMessageContent2"><p>Tout les messages sont affichés ici.</p>
+                </div>
+                <div class = "cardMessageContent3"><p>Tout les messages sont affichés ici.</p>
+                </div>    
             </div>
+
+            <!-- Cards Tasks -->
             <div class = "cardTasks">
                 <button class = "button">+ Add Task</button>
                 <h2>Tasks</h2>
-                <p>Toutes les Tasks sont affichées ici.</p>
+                <ol id = "tasksList">
+                    <li>Verification Mail</li>
+                    <li>Reunion
+                        <ol type = "a">
+                        <li>Team</li>
+                        <li>Superior</li>
+                        </ol>
+                    </li>
+                    <li>Verification Calendar</li>
+                </ol>
             </div>
+
+            <!-- Cards Idea -->
             <div class = "cardIdea">
                 <button class = "button">+ Add Idea</button>
                 <h2>Idea</h2>
-                <p>Toutes les idées sont affichées ici.</p>
+                <ul>
+                    <li>Idea 1</li>
+                    <li>Idea 2</li>
+                    <li>Idea 3</li>
+                </ul>  
             </div>
+
+            <!-- Cards Calendar -->
             <div class = "cardCalendar">
                 <img class = "calendar" src = "img/calendar.png" alt="Calendar"></img>
             </div>
