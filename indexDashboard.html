@@ -14,14 +14,14 @@
                     <input class = "searchBar"
                     type="search"
                     placeholder="Type to search…" />
-                    <button>Search</button>
+                    <button class = "button">Search</button>
                 </div>
             </form>
 
                 <div class = "icons">
-                    <div><img class = "icon" src = "img/home.svg" alt="Home"></div>
-                    <div><img class = "icon" src = "img/enveloppe.svg" alt="Email"></div>
-                    <div><img class = "icon" src = "img/video.svg" alt="Visio"></div>
+                    <div><button class = "buttonsIcon"><img class = "icon" src = "img/home.svg" alt="Home"></button></div>
+                    <div><button class = "buttonsIcon"><img class = "icon" src = "img/enveloppe.svg" alt="Email"></button></div>
+                    <div><button class = "buttonsIcon"><img class = "icon" src = "img/video.svg" alt="Visio"></button></div>
                 </div>
 
                 <div class = "welcome">
@@ -32,22 +32,37 @@
     </header>
 
     <main>
+        <div class = "cardMenu">
+            <h2>Dashboard Menu</h2>
+            <p>Dashboard</p>
+            <p>Analytics</p>
+            <p>Kanban</p>
+            <p>File Manager</p>
+            <p>History</p>
+            <p>______________</p> 
+            <p>Settings</p>
+            <p>Contact</p> 
+            <p>Logout</p>  
+        </div>
         <div class = "main">
             <div class = "cardMessage">
+                <button class = "button">New Message</button>
                 <h2>Message</h2>
                 <p>Tout les messages sont affichés ici.</p>
             </div>
             <div class = "cardTasks">
+                <button class = "button">+ Add Task</button>
                 <h2>Tasks</h2>
                 <p>Toutes les Tasks sont affichées ici.</p>
             </div>
             <div class = "cardIdea">
+                <button class = "button">+ Add Idea</button>
                 <h2>Idea</h2>
                 <p>Toutes les idées sont affichées ici.</p>
             </div>
             <div class = "cardCalendar">
-                <h2>Calendar</h2>
-                <p>Calendar ici</p>
+                <img class = "calendar" src = "img/calendar.png" alt="Calendar"></img>
+            </div>
         </div>
 </body>
 </html>
