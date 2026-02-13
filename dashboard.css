@@ -24,6 +24,7 @@ body {
     padding : 5px;
     margin-right : 10px;
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
 }
 
 .icons {
@@ -42,7 +43,8 @@ body {
     align-items : center;
     border : 1px solid black;
     border-radius : 5px;
-    margin-right: 35px;   
+    margin-right: 35px;  
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff; 
 }
 
 .userName {
@@ -83,6 +85,15 @@ body {
 
 .buttonsIcon:hover { 
     background-color : #0056b3;
+    transform : scale(1.1);
+}
+
+.buttonsMessage {
+    border : none;
+    cursor : pointer;
+}
+
+.buttonsMessage:hover {
     transform : scale(1.1);
 }
 
@@ -144,6 +155,7 @@ align-items : center;
     position : absolute;
     left : 0px;
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
 }
 
 /* Cards Message */
@@ -157,38 +169,97 @@ align-items : center;
     position : absolute;
     left : 180px;
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
 }
 
 .cardMessageContent {
-    border : 1px solid black;
+    border : 1px solid white;
     padding : 10px;
     width : 300px;
     height : 100px;
     position : absolute;
     left : 25px;
     border-radius : 5px;
+    box-shadow : 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter : blur(6px);
+    cursor : pointer;
+    transition : all 0.5s;
+}
+
+.cardMessageContent:hover {
+    border : 1px solid black;
+    transform : scale(1.05);
+}
+
+.cardMessageContent:active {
+    transform : scale(0.95) rotateZ(1.7deg);
 }
 
 .cardMessageContent2 {
     margin-top: 150px;
-    border : 1px solid black;
+    border : 1px solid white;
     padding : 10px;
     width : 300px;
     height : 100px;
     position : absolute;
     left : 25px;
     border-radius : 5px;
+    box-shadow : 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter : blur(6px);
+    cursor : pointer;
+    transition : all 0.5s;
+}
+
+.cardMessageContent2:hover {
+    border: 1px solid black;
+    transform : scale(1.05);
+}
+
+.cardMessageContent2:active {
+    transform : scale(0.95) rotateZ(1.7deg);
 }
 
 .cardMessageContent3 {
     margin-top: 300px;
-    border : 1px solid black;
+    border : 1px solid white;
     padding : 10px;
     width : 300px;
     height : 100px;
     position : absolute;
     left : 25px;
     border-radius : 5px;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter : blur(6px);
+    cursor : pointer;
+    transition : all 0.5s;
+}
+
+.cardMessageContent3:hover {
+    border: 1px solid black;
+    transform : scale(1.05);
+}
+
+.cardMessageContent3:active {
+    transform : scale(0.95) rotateZ(1.7deg);
+}
+
+.userContent {
+    display : flex;
+    align-items : center;
+}
+
+.userName {
+    margin-left : 10px;
+}
+
+.statut {
+    margin-left : 190px;
+}
+
+.cardMessageIcons {
+    display : flex;
+    justify-content : space-around;
+    margin-top : 500px;
 }
 
 /* Cards Tasks */
@@ -202,6 +273,7 @@ align-items : center;
     position : absolute;
     left: 600px; 
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
 }
 
 /* Cards Idea */
@@ -214,7 +286,8 @@ align-items : center;
     height : 200px;
     position : absolute;
     left : 1070px;  
-    border-radius : 5px;  
+    border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;  
 }
 
 /* Cards Calendar */
@@ -228,13 +301,67 @@ align-items : center;
     position : absolute;
     left : 600px;
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
 }
 
+/* Img calendar
 .calendar {
     width : 100%;
     height : 100%;
     border-radius : 5px;
+    box-shadow: 15px 15px 30px #bebebe,-15px -15px 30px #ffffff;
+}  */
+
+
+.cardCalendar {
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    background : linear-gradient(45deg, #f8f8ff , #e0ffff 33%, #add8e6 67%, #87ceeb 100%);
 }
+
+h1 {
+    font-weight : 800;
+    margin : 5px;
+}
+
+.ulCalendar {
+    display : grid;
+    grid-template-columns : repeat(7, 1fr);
+    list-style : none;
+}
+
+.liCalendar {
+    display : flex;
+    width : 50px;
+    height : 50px;
+    margin : 5px;
+    flex-flow : column;
+    border-radius : 5px;
+    padding : 1px;
+    font-weight : bold;
+    font-size : 14px;
+    background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+time {
+    font-size: 2rem;
+	margin: 0 0 1px 0;
+	font-weight: 500;
+}
+
+.today {
+    time {
+        font-weight: 800;
+	}
+	background: #ffffff70;
+}
+
+
 
 /* Text */
 
